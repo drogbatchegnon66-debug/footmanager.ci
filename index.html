@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f56612">
+  <meta name="description" content="Découvrez le Centre de Formation de Football ANEWÉ ZOUKOUGBEU en Côte d'Ivoire. Inscriptions, formation des jeunes talents, actualités et contacts.">
+  <title>ANEWÉ ZOUKOUGBEU | Centre de Formation de Football</title>
+
+  <style>
+    :root {
+      --orange: #f56612;
+      --rouge: #d91e26;
+      --noir: #151515;
+      --blanc: #ffffff;
+      --gris: #f4f4f4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--noir);
+      line-height: 1.6;
+      background: var(--blanc);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: var(--noir);
+      color: white;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 13px;
+    }
+
+    header {
+      background: white;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      color: var(--orange);
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      min-height: 490px;
+      padding: 65px 7%;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-weight: bold;
+      padding: 7px 13px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 58px);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #ff781f;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 540px;
+      margin-bottom: 26px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      padding: 13px 19px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 4px 5px 4px 0;
+    }
+
+    .button:hover {
+      background: #d95000;
+    }
+
+    .button-dark {
+      background: white;
+      color: var(--noir);
+    }
+
+    section {
+      padding: 60px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(25px, 4vw, 36px);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .orange-line {
+      width: 65px;
+      height: 4px;
+      background: var(--orange);
+      margin: 12px auto;
+      border-radius: 5px;
+    }
+
+    .about-grid,
+    .price-grid,
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e7e7e7;
+      box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .symbol {
+      font-size: 32px;
+    }
+
+    .prices {
+      background: var(--gris);
+    }
+
+    .price-card {
+      text-align: center;
+      border-top: 5px solid var(--orange);
+    }
+
+    .price-card .amount {
+      color: var(--orange);
+      font-size: 28px;
+      font-weight: 900;
+      margin: 12px 0;
+    }
+
+    .price-card .old {
+      border-color: var(--rouge);
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 15px;
+      border-left: 4px solid var(--orange);
+      background: white;
+      font-size: 14px;
+    }
+
+    .enrollment {
+      background: var(--noir);
+      color: white;
+      text-align: center;
+    }
+
+    .enrollment p {
+      max-width: 650px;
+      margin: 12px auto;
+      color: #ddd;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .contact-box {
+      background: var(--gris);
+      padding: 24px;
+      border-radius: 10px;
+    }
+
+    .contact-box p {
+      margin: 9px 0;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #101010;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    footer span {
+      color: #ff781f;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 450px;
+        padding: 50px 6%;
+      }
+
+      .about-grid,
+      .price-grid,
+      .feature-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    SAISON SPORTIVE 2026–2027 · GARÇONS ET FILLES
+  </div>
+
+  <header>
+    <a class="brand" href="#accueil">
+      ANEWÉ <span>ZOUKOUGBEU</span><br>
+      <small>Centre de Formation de Football</small>
+    </a>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#centre">Le centre</a>
+      <a href="#formation">Formation</a>
+      <a href="#inscriptions">Inscriptions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="tag">SAISON 2026–2027</span>
+        <h1>Former aujourd'hui<br>les <span>talents de demain.</span></h1>
+        <p>
+          Bienvenue au Centre de Formation de Football
+          ANEWÉ ZOUKOUGBEU. Un espace pour apprendre,
+          progresser et développer son potentiel footballistique.
+        </p>
+        <a class="button" href="#inscriptions">Découvrir les inscriptions</a>
+        <a class="button button-dark" href="#contact">Nous contacter</a>
+      </div>
+    </section>
+
+    <section id="centre">
+      <div class="section-title">
+        <h2>Bienvenue dans notre centre</h2>
+        <div class="orange-line"></div>
+        <p>La passion du football, la discipline et le développement des talents.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card">
+          <div class="symbol">⚽</div>
+          <h3>Formation sportive</h3>
+          <p>
+            Accompagner les jeunes dans leur progression technique,
+            physique et collective.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🤝</div>
+          <h3>Esprit d'équipe</h3>
+          <p>
+            Encourager le respect, la discipline, la solidarité
+            et le travail collectif.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🏆</div>
+          <h3>Développer les talents</h3>
+          <p>
+            Aider chaque joueur et chaque joueuse à progresser
+            et à poursuivre ses objectifs sportifs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="formation">
+      <div class="section-title">
+        <h2>Une formation ouverte à tous</h2>
+        <div class="orange-line"></div>
+        <p>Le centre accueille les garçons et les filles.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="symbol">👦</div>
+          <h3>Football masculin</h3>
+          <p>Un parcours de formation pour les garçons passionnés de football.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">👧</div>
+          <h3>Football féminin</h3>
+          <p>Un espace de progression et d'expression sportive pour les filles.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">📅</div>
+          <h3>Rentrée sportive</h3>
+          <p>Date annoncée sur l'affiche : 7 novembre 2026.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="prices" id="inscriptions">
+      <div class="section-title">
+        <h2>Inscriptions et frais</h2>
+        <div class="orange-line"></div>
+        <p>Les tarifs annoncés pour la saison 2026–2027.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="card price-card">
+          <h3>Inscription</h3>
+          <div class="amount">20 000 FCFA</div>
+          <p>Frais d'inscription annoncés pour chaque nouvel inscrit.</p>
+        </article>
+
+        <article class="card price-card">
+          <h3>Nouveaux membres</h3>
+          <div class="amount">80 000 FCFA</div>
+          <p>Frais annuels annoncés pour les nouveaux membres.</p>
+        </article>
+
+        <article class="card price-card">
+          <h3>Anciens membres</h3>
+          <div class="amount">40 000 FCFA</div>
+          <p>Frais annuels annoncés pour les anciens membres.</p>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Documents à fournir selon l'affiche :</strong>
+        extrait de naissance, autorisation parentale légalisée
+        et certificat d'aptitude.
+        <br><br>
+        <strong>Équipements annoncés :</strong>
+        les nouveaux membres reçoivent deux maillots et un sac ;
+        les anciens, un maillot et un sac.
+        Les voyages sont à la charge des parents.
+        <br><br>
+        Merci de contacter le centre pour confirmer les conditions,
+        les documents et les tarifs avant tout paiement.
+      </div>
+    </section>
+
+    <section class="enrollment">
+      <h2>Prêt à rejoindre l'aventure ?</h2>
+      <p>
+        Pour toute question sur la formation, les inscriptions
+        ou la rentrée sportive, contactez directement le centre.
+      </p>
+      <a class="button" href="#contact">Contacter le centre</a>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact et renseignements</h2>
+        <div class="orange-line"></div>
+        <p>Le centre peut vous renseigner sur les inscriptions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>📞 Téléphone</h3>
+          <p>
+            <a href="tel:0758092115">07 58 09 21 15</a>
+          </p>
+          <p>
+            <a href="tel:0709060790">07 09 06 07 90</a>
+          </p>
+          <p>Appelle pour vérifier les informations et les modalités d'inscription.</p>
+        </div>
+
+        <div class="contact-box">
+          <h3>💬 WhatsApp</h3>
+          <p>Écris au centre pour demander des renseignements.</p>
+          <a class="button"
+             href="https://wa.me/225758092115?text=Bonjour%2C%20je%20souhaite%20des%20renseignements%20sur%20le%20Centre%20ANEW%C3%89%20ZOUKOUGBEU."
+             target="_blank" rel="noopener">
+            Écrire sur WhatsApp
+          </a>
+          <p style="font-size:12px;margin-top:12px">
+            Vérifie que ce numéro utilise WhatsApp avant de diffuser le site.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span>ANEWÉ ZOUKOUGBEU</span> · Centre de Formation de Football</p>
+    <p>Saison sportive 2026–2027</p>
+    <p style="margin-top:10px">Site réalisé par FootManager CI</p>
+  </footer>
+</body>
+  </html>
+                                   
